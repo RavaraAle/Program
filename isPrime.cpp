@@ -37,9 +37,6 @@ bool isPrimeWhile(int n) {
     while (p <= limit && n % p != 0)
         p += 2;
 
-    if (p > limit)
-        return true;
-    else
-        return false;
+	return p > limit;
 }
 
