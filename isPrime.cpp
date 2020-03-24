@@ -1,0 +1,45 @@
+//
+// Created by gliol on 05/03/2020.
+//
+
+#include <cmath>
+#include "isPrime.h"
+
+bool isPrimeFor(int n) {
+    if (n % 2 == 0)
+        return n == 2; // Two is the only even prime number
+
+    n = abs(n);
+
+    auto limit = (int)floor(sqrt((double)n));
+    if (n == limit * limit)
+        return false; // Perfect square
+
+    for (unsigned long p = 3; p <= limit; p += 2)
+        if (n % p == 0)
+            return false;
+
+    return true;
+}
+
+
+
+bool isPrimeWhile(unsigned long n) {
+    if (n % 2 == 0) {
+        return n == 2; //Two is the only even prime number
+    }
+
+    unsigned long limit = (unsigned long)floor(sqrt((float)n));
+    if (n == limit * limit)
+        return false; //Perfect square
+
+    unsigned long p = 3;
+    while (p <= limit && n % p != 0)
+        p += 2;
+
+    if (p > limit)
+        return true;
+    else
+        return false;
+}
+
