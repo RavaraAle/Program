@@ -24,7 +24,7 @@ bool isPrimeFor(int n) {
 
 
 
-bool isPrimeWhile(unsigned long n) {
+bool isPrimeWhile(int n) {
     if (n % 2 == 0) {
         return n == 2; //Two is the only even prime number
     }
