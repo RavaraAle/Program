@@ -33,7 +33,7 @@ bool isPrimeWhile(int n) {
     if (n == limit * limit)
         return false; //Perfect square
 
-    unsigned long p = 3;
+    int p = 3; // newStuff branch
     while (p <= limit && n % p != 0)
         p += 2;
 
