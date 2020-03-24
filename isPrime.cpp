@@ -29,7 +29,7 @@ bool isPrimeWhile(int n) {
         return n == 2; //Two is the only even prime number
     }
 
-    unsigned long limit = (unsigned long)floor(sqrt((float)n));
+    int limit = (int)floor(sqrt((float)n));
     if (n == limit * limit)
         return false; //Perfect square
 
